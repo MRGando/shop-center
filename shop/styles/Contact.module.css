@@ -1,0 +1,134 @@
+.main {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset;
+}
+.main__content {
+  background: linear-gradient(180deg, #911a00 0%, #641200 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.main__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 1800px;
+  max-width: 100%;
+}
+.main__context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset;
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  padding: 60px 30px;
+}
+.main__context > * {
+  font-family: light;
+  width: 100%;
+  color: white;
+  margin: 15px 0;
+}
+.main__context > *:nth-child(1) {
+  font-family: bold;
+  font-size: 30px;
+}
+.main__context > *:nth-child(2) {
+  font-size: 25px;
+}
+.main__contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 30rem;
+}
+.main__contactForm > * {
+  font-size: 20px;
+  font-family: bold;
+  color: #901a00;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  width: 100%;
+  resize: none;
+}
+.main__submitBtn {
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.main__submitBtn:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 550px) {
+  .main__context {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    padding: 60px 30px;
+  }
+  .main__context > *:nth-child(2) {
+    font-size: 15px;
+  }
+  .main__contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main__contactForm > * {
+    font-size: 15px;
+    font-family: bold;
+    color: #901a00;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    width: 100%;
+    resize: none;
+  }
+  .main__submitBtn {
+    text-align: center;
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .main__submitBtn:hover {
+    opacity: 0.8;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main__context {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    padding: 60px 30px;
+  }
+  .main__context > *:nth-child(2) {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=Contact.module.css.map */

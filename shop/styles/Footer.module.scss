@@ -1,0 +1,151 @@
+$_red: #901a00;
+$_gradient_red: linear-gradient(90deg, #911a00 67.82%, #6f1400 100%);
+$_white: #ebebeb;
+$_footerDark: #383838;
+$_gray: #bdbdbd;
+$_gray_darker: #454545;
+
+@mixin Flex($_justify, $_align, $_direction) {
+  display: flex;
+  justify-content: $_justify;
+  align-items: $_align;
+  flex-direction: $_direction;
+}
+@mixin widthLimit() {
+  width: 1800px;
+  max-width: 100%;
+}
+
+.main {
+  .sectionThree {
+    width: 100%;
+    background-color: $_footerDark;
+    color: white;
+    @include Flex(center, center, column);
+    font-family: light;
+    font-size: 20px;
+    border-top: 8px solid $_red;
+    position: relative;
+    &__container {
+      @include Flex(space-evenly, center, row);
+      @include widthLimit();
+      padding: 20px 40px;
+      & > * {
+        width: 50%;
+      }
+    }
+    &__borderline {
+      width: 5px;
+      height: 300px;
+      background-color: $_gray_darker;
+      border-radius: 2px;
+      margin: 0 40px;
+    }
+
+    &__boxTwo,
+    &__boxOne {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      align-self: baseline;
+      height: 100%;
+    }
+    &__title {
+      font-family: bold;
+      font-size: 22px;
+      border-bottom: 4px solid white;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+    &__context {
+      line-height: 38px;
+    }
+    &__context,
+    &__info,
+    &__tags {
+      margin: 30px 0;
+    }
+    &__info {
+      & > * {
+        margin: 10px 0;
+      }
+    }
+    &__tags {
+      @include Flex(flex-start, flex-start, row);
+      flex-wrap: wrap;
+      & > * {
+        background-color: $_gray;
+        color: black;
+        border-radius: 15px;
+        font-size: 15px;
+        padding: 5px 10px;
+        font-family: medium;
+        margin: 3px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      & > *:hover {
+        opacity: 0.8;
+      }
+    }
+    &__achievements {
+      width: 100%;
+      @include Flex(center, center, row);
+      & > * {
+        margin: 0 5px;
+      }
+    }
+    &__scrollTopIcon {
+      background-color: $_red;
+      font-size: 50px;
+      position: absolute;
+      top: -30px;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+    }
+    &__footer {
+      background-color: $_red;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 983px) {
+  .main {
+    .sectionThree {
+      &__container {
+        @include Flex(center, center, column);
+        padding: 40px 20px;
+        & > * {
+          width: 100%;
+        }
+      }
+      &__borderline {
+        display: none;
+      }
+      &__footer {
+        font-size: 17px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 820px) {
+  .main {
+    .sectionThree {
+      margin-bottom: 5rem;
+      &__title {
+        font-size: 17px;
+      }
+      &__info {
+        font-size: 15px;
+      }
+      &__context {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@font-face {
+  font-family: bold;
+  src: url("/fonts/Bold.ttf");
+}
+@font-face {
+  font-family: light;
+  src: url("/fonts/Light.ttf");
+}
+@font-face {
+  font-family: medium;
+  src: url("/fonts/Medium.ttf");
+}
+@font-face {
+  font-family: thin;
+  src: url("/fonts/Thin.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  font-family: light;
+}
+body {
+  overflow-x: hidden;
+  background-color: #ebebeb;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+ul li {
+  list-style-type: none;
+}
+img {
+  user-select: none;
+}
+
+.forbiddenToMove {
+  pointer-events: none;
+}
+#bg_black {
+  background-color: black;
+}
+#bg_red {
+  background-color: red;
+}
+#active_dot {
+  background-color: black;
+}
+#scroll_left {
+  left: 0px;
+}
+#scroll_right {
+  right: 0px;
+}
+#show,
+.show {
+  display: flex;
+}
+#hide {
+  display: none;
+}
+#main {
+  width: 100%;
+  padding-top: 93px;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.arrowIcon {
+  margin-right: 10px;
+}
+.chart {
+  box-shadow: 0 0 10px rgb(90, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  color: #6d6d6d;
+}
+
+@media only screen and (max-width: 1285px) {
+  #info,
+  #buySection {
+    display: none;
+  }
+}
+#loginForm {
+  right: 0;
+}
+#signupForm {
+  left: 0;
+}
+#loginButton,
+#signupButton {
+  position: absolute;
+  transition: 0.2s;
+}
+#loginButton::after {
+  content: "";
+  transition: 0.2s;
+  position: absolute;
+  right: -70px;
+  top: 0;
+  width: 80%;
+  height: 60px;
+  background-color: rgb(104, 0, 0);
+  border-radius: 50px;
+}
+#signupButton::after {
+  content: "";
+  transition: 0.2s;
+  position: absolute;
+  right: 130px;
+  top: 0;
+  width: 60%;
+  height: 60px;
+  background-color: rgb(104, 0, 0);
+  border-radius: 50px;
+}
+
+#right {
+  right: 9px;
+}
+#left {
+  left: 0;
+}
